@@ -21,6 +21,7 @@ public class Main {
     public static void Divide(int x, int y)
     {
         // Write code here!
+        return x/y;
     }
 
     public static int CheckFileExtension(String fileName)
