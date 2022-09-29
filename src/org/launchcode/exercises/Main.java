@@ -1,5 +1,7 @@
 package org.launchcode.exercises;
 
+import org.launchcode.Temperature.TemperatureException;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,15 +20,29 @@ public class Main {
         // Test out your CheckFileExtension() function!
     }
 
-    public static void Divide(int x, int y)
-    {
+    public static void Divide(int x, int y) {
         // Write code here!
-        return x/y;
+        int z;
+        x = 6;
+        if (y == 0) {
+            try {
+                new ArithmeticException("You can't divide by 0!!");
+            } catch (ArithmeticException e) {
+                e.printStackTrace();
+            }
+        }
+        z = x/y;
     }
 
     public static int CheckFileExtension(String fileName)
     {
         // Write code here!
+        if (fileName.contains(".java")) {
+            return 1;
+        } else if (!fileName.contains(".java")) {
+            return 0;
+        }
+
     }
 
 }
